@@ -1,6 +1,5 @@
 "use client";
-
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform, type Variants } from "motion/react";
 import { useRef } from "react";
 
 const container = {
@@ -12,7 +11,7 @@ const container = {
   },
 };
 
-const item = {
+const item: Variants = {
   hidden: {
     opacity: 0,
     y: 24,
@@ -171,7 +170,7 @@ export default function Hero() {
               className="mt-10 flex flex-wrap gap-4"
             >
               <a
-                href="#projects"
+                href="/projects"
                 className="group rounded-md bg-[#f2e5ca] px-5 py-3 font-mono text-sm font-medium text-[#3b3025] shadow-lg shadow-black/20 transition-all duration-300 hover:bg-white hover:shadow-xl"
               >
                 View my work

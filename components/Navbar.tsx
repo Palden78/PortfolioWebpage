@@ -13,28 +13,35 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-8 font-mono text-xs text-white/80 sm:flex">
           <Link
-            href="#about"
+            href="/#about"
             className="transition-colors hover:text-white"
           >
             about
           </Link>
 
           <Link
-            href="#projects"
+            href="/projects"
             className="transition-colors hover:text-white"
           >
             projects
           </Link>
 
           <Link
-            href="#learning"
+            href="/learning"
             className="transition-colors hover:text-white"
           >
             learning
           </Link>
 
           <Link
-            href="#contact"
+            href="/journey"
+            className="transition-colors hover:text-white"
+          >
+            journey
+          </Link>
+
+          <Link
+            href="/#contact"
             className="transition-colors hover:text-white"
           >
             contact
