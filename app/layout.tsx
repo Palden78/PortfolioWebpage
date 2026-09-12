@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Cinzel } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Cinzel,
+} from "next/font/google";
+
 import "./globals.css";
+
+import SiteChrome from "@/components/SiteChrome";
+import InspectPanel from "@/components/InspectPanel";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -33,7 +41,11 @@ export default function RootLayout({
       <body
         className={`${geist.variable} ${geistMono.variable} ${cinzel.variable}`}
       >
-        {children}
+        <SiteChrome>
+          {children}
+        </SiteChrome>
+
+        <InspectPanel />
       </body>
     </html>
   );

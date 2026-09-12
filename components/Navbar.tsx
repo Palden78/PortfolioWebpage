@@ -1,51 +1,51 @@
-import Link from "next/link";
+import JournalLink from "@/components/JournalLink";
 
 export default function Navbar() {
   return (
     <header className="fixed top-0 z-50 w-full">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <Link
+        <JournalLink
           href="/"
           className="font-cinzel text-sm tracking-widest text-white drop-shadow-md transition-colors hover:text-amber-100"
         >
           PT.
-        </Link>
+        </JournalLink>
 
         <div className="hidden items-center gap-8 font-mono text-xs text-white/80 sm:flex">
-          <Link
+          <JournalLink
             href="/#about"
             className="transition-colors hover:text-white"
           >
             about
-          </Link>
+          </JournalLink>
 
-          <Link
+          <JournalLink
             href="/projects"
             className="transition-colors hover:text-white"
           >
             projects
-          </Link>
+          </JournalLink>
 
-          <Link
+          <JournalLink
             href="/learning"
             className="transition-colors hover:text-white"
           >
             learning
-          </Link>
+          </JournalLink>
 
-          <Link
+          <JournalLink
             href="/journey"
             className="transition-colors hover:text-white"
           >
             journey
-          </Link>
+          </JournalLink>
 
-          <Link
+          <JournalLink
             href="/#contact"
             className="transition-colors hover:text-white"
           >
             contact
-          </Link>
+          </JournalLink>
         </div>
 
         <a

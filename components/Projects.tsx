@@ -1,133 +1,194 @@
 "use client";
 
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
+import { useState } from "react";
 
-const projects = [
+type Project = {
+  number: string;
+  title: string;
+  description: string;
+  stack: string[];
+  problem: string;
+  approach: string;
+  learned: string;
+};
+
+const projects: Project[] = [
   {
-    name: "APSAP Research Assistant",
-    path: "~/projects/apsap-rag",
+    number: "01",
+    title: "APSAP Research Assistant",
     description:
-      "A RAG-based research assistant for archaeological research, built around curated South Caucasus archaeological sources.",
-    stack: ["Next.js", "FastAPI", "ChromaDB", "Docker"],
-    status: "research",
+      "A grounded archaeological research assistant designed to help researchers and students retrieve useful information from a curated collection of archaeological sources.",
+    stack: [
+      "Next.js",
+      "React",
+      "FastAPI",
+      "ChromaDB",
+      "MySQL",
+      "Docker",
+    ],
+    problem:
+      "Archaeological material was spread across curated research documents, making grounded answers difficult to retrieve quickly.",
+    approach:
+      "Built a retrieval-augmented assistant that combines vector search, structured retrieval, and online search while keeping answers grounded in the supplied sources.",
+    learned:
+      "How retrieval quality, chunking, evaluation, and system boundaries matter just as much as the language model itself.",
   },
   {
-    name: "URL Shortener",
-    path: "~/projects/url-shortener",
+    number: "02",
+    title: "URL Shortener",
     description:
-      "A backend-focused URL shortening service built to explore APIs, databases, containers, and service architecture.",
-    stack: ["FastAPI", "PostgreSQL", "Docker"],
-    status: "building",
+      "A small backend-focused system built to understand how HTTP requests, persistence, validation, and deployment fit together in a real application.",
+    stack: [
+      "FastAPI",
+      "PostgreSQL",
+      "Docker",
+      "Python",
+    ],
+    problem:
+      "A URL shortener looks simple on the surface, but even a small service requires careful handling of data modeling, validation, failures, and configuration.",
+    approach:
+      "Designed a REST API backed by PostgreSQL, containerized the application, and separated application logic from persistence and deployment concerns.",
+    learned:
+      "How seemingly simple backend systems expose important engineering decisions around data modeling, validation, configuration, and deployment.",
   },
 ];
 
 export default function Projects() {
+  const [openProject, setOpenProject] = useState<string | null>(
+    null
+  );
+
   return (
-    <section
-      id="projects"
-      className="relative overflow-hidden bg-[#e9dfcc] px-6 pb-32"
-    >
-      {/* Paper texture */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.035]"
-        style={{
-          backgroundImage: `
-            radial-gradient(#3b3025 0.7px, transparent 0.7px)
-          `,
-          backgroundSize: "14px 14px",
-        }}
-      />
+    <section className="bg-[#e9dfcc] px-6 py-24 text-[#3b3025]">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12 flex items-end justify-between border-b border-[#c9bda7] pb-4">
+          <div>
+            <p className="font-mono text-[10px] tracking-[0.25em] text-[#9b7847]">
+              ARCHIVE
+            </p>
 
-      <div className="relative mx-auto max-w-6xl">
-        <div className="space-y-6">
-          {projects.map((project, index) => (
-            <motion.article
-              key={project.name}
-              initial={{
-                opacity: 0,
-                y: 40,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-                margin: "-80px",
-              }}
-              transition={{
-                duration: 0.7,
-                delay: index * 0.12,
-              }}
-              whileHover={{
-                y: -4,
-              }}
-              className="group relative overflow-hidden rounded-lg border border-[#c9bda7] bg-[#eee5d5]/70 transition-all duration-300 hover:border-[#9b7847] hover:bg-[#f2e9da]"
-            >
-              {/* Project header */}
-              <div className="flex items-center justify-between border-b border-[#c9bda7] px-5 py-3">
-                <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[#b8a487]" />
-                  <span className="h-2 w-2 rounded-full bg-[#c9bda7]" />
-                  <span className="h-2 w-2 rounded-full bg-[#d8ccb8]" />
-                </div>
+            <h2 className="mt-2 font-cinzel text-3xl">
+              Selected work
+            </h2>
+          </div>
 
-                <span className="font-mono text-[10px] tracking-widest text-[#8a755b]">
-                  {project.path}
-                </span>
-              </div>
+          <span className="font-mono text-[10px] tracking-widest text-[#8a755b]">
+            ARCHIVE ENTRIES / 02 ITEMS
+          </span>
+        </div>
 
-              <div className="p-6 sm:p-8">
-                <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
-                  <div className="max-w-3xl">
-                    <div className="font-mono text-xs tracking-[0.2em] text-[#9b7847]">
-                      PROJECT //{" "}
-                      {String(index + 1).padStart(2, "0")}
-                    </div>
+        <div className="divide-y divide-[#c9bda7]">
+          {projects.map((project) => {
+            const isOpen = openProject === project.number;
 
-                    <h2 className="mt-4 font-cinzel text-3xl text-[#3b3025] transition-colors duration-300 group-hover:text-[#80613a] sm:text-4xl">
-                      {project.name}
-                    </h2>
-
-                    <p className="mt-5 text-lg leading-relaxed text-[#665846]">
-                      {project.description}
-                    </p>
-
-                    <div className="mt-7 flex flex-wrap gap-2">
-                      {project.stack.map((technology) => (
-                        <span
-                          key={technology}
-                          className="rounded-md border border-[#c9bda7] px-3 py-1.5 font-mono text-xs text-[#806f59] transition-colors duration-300 group-hover:border-[#b8a487]"
-                        >
-                          {technology}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="shrink-0 lg:text-right">
-                    <span className="font-mono text-[10px] tracking-[0.2em] text-[#8a755b]">
-                      STATUS
+            return (
+              <motion.article
+                key={project.number}
+                layout
+                className="py-8"
+              >
+                <button
+                  type="button"
+                  onClick={() =>
+                    setOpenProject(
+                      isOpen ? null : project.number
+                    )
+                  }
+                  className="w-full text-left"
+                >
+                  <div className="grid gap-6 md:grid-cols-[80px_1fr_auto] md:items-start">
+                    <span className="font-mono text-xs text-[#9b7847]">
+                      {project.number}
                     </span>
 
-                    <div className="mt-2 font-mono text-xs uppercase tracking-widest text-[#9b7847]">
-                      [{project.status}]
+                    <div>
+                      <h3 className="font-cinzel text-2xl transition-colors duration-300 group-hover:text-[#9b7847]">
+                        {project.title}
+                      </h3>
+
+                      <p className="mt-3 max-w-2xl text-sm leading-7 text-[#756957]">
+                        {project.description}
+                      </p>
+
+                      <div className="mt-5 flex flex-wrap gap-2">
+                        {project.stack.map((item) => (
+                          <span
+                            key={item}
+                            className="rounded-full border border-[#c9bda7] px-3 py-1 font-mono text-[9px] tracking-wide text-[#806f59]"
+                          >
+                            {item}
+                          </span>
+                        ))}
+                      </div>
                     </div>
+
+                    <span className="font-mono text-[9px] tracking-[0.18em] text-[#9b7847] md:pt-2">
+                      {isOpen
+                        ? "CLOSE ENTRY ↑"
+                        : "INSPECT ENTRY →"}
+                    </span>
                   </div>
-                </div>
+                </button>
 
-                <div className="mt-8 flex items-center justify-between border-t border-[#c9bda7] pt-5">
-                  <span className="font-mono text-xs text-[#8a755b]">
-                    ARCHIVE_ENTRY_{String(index + 1).padStart(3, "0")}
-                  </span>
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      initial={{
+                        height: 0,
+                        opacity: 0,
+                      }}
+                      animate={{
+                        height: "auto",
+                        opacity: 1,
+                      }}
+                      exit={{
+                        height: 0,
+                        opacity: 0,
+                      }}
+                      transition={{
+                        duration: 0.35,
+                        ease: "easeInOut",
+                      }}
+                      className="overflow-hidden"
+                    >
+                      <div className="mt-10 grid gap-8 border-t border-[#c9bda7] pt-8 md:grid-cols-3 md:pl-[80px]">
+                        <div>
+                          <p className="font-mono text-[9px] tracking-[0.2em] text-[#9b7847]">
+                            THE PROBLEM
+                          </p>
 
-                  <span className="font-mono text-xs text-[#8a755b] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#6d512e]">
-                    explore →
-                  </span>
-                </div>
-              </div>
-            </motion.article>
-          ))}
+                          <p className="mt-3 text-sm leading-7 text-[#665846]">
+                            {project.problem}
+                          </p>
+                        </div>
+
+                        <div>
+                          <p className="font-mono text-[9px] tracking-[0.2em] text-[#9b7847]">
+                            THE APPROACH
+                          </p>
+
+                          <p className="mt-3 text-sm leading-7 text-[#665846]">
+                            {project.approach}
+                          </p>
+                        </div>
+
+                        <div>
+                          <p className="font-mono text-[9px] tracking-[0.2em] text-[#9b7847]">
+                            WHAT I LEARNED
+                          </p>
+
+                          <p className="mt-3 text-sm leading-7 text-[#665846]">
+                            {project.learned}
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.article>
+            );
+          })}
         </div>
       </div>
     </section>
