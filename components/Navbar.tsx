@@ -41,7 +41,7 @@ export default function Navbar() {
           </JournalLink>
 
           <JournalLink
-            href="/#contact"
+            href="/contact"
             className="transition-colors hover:text-white"
           >
             contact

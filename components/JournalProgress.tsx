@@ -13,6 +13,7 @@ const labels: Record<string, string> = {
   "/projects": "ARCHIVE",
   "/learning": "FIELD NOTES",
   "/journey": "EXPEDITION LOG",
+  "/contact": "CORRESPONDENCE",
 };
 
 export default function JournalProgress() {
@@ -35,13 +36,15 @@ export default function JournalProgress() {
   const label = labels[pathname] ?? "FIELD JOURNAL";
 
   const pageNumber =
-    pathname === "/"
-      ? "01"
-      : pathname === "/projects"
-        ? "02"
-        : pathname === "/learning"
-          ? "03"
-          : "04";
+  pathname === "/"
+    ? "01"
+    : pathname === "/projects"
+      ? "02"
+      : pathname === "/learning"
+        ? "03"
+        : pathname === "/journey"
+          ? "04"
+          : "05";
 
   return (
     <div className="pointer-events-none fixed right-5 top-1/2 z-40 hidden -translate-y-1/2 lg:block">
