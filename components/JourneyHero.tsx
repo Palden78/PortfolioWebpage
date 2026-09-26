@@ -75,7 +75,7 @@ export default function JourneyHero() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/journey-landscape.png')",
+            backgroundImage: "url('/converted-journey-landscape.webp')",
           }}
         />
 

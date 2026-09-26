@@ -47,7 +47,7 @@ export default function ContactHero() {
         className="fixed inset-0 -z-10 origin-center"
       >
         <img
-          src="/contact-castle.png"
+          src="/converted-contact-castle.webp"
           alt=""
           className="h-full w-full object-cover"
         />

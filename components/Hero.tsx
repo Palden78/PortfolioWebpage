@@ -81,7 +81,7 @@ export default function Hero() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/hero-landscape.png')",
+            backgroundImage: "url('/converted-hero-landscape.webp')",
           }}
         />
 

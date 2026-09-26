@@ -80,7 +80,7 @@ export default function ProjectsHero() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/projects-interior.png')",
+            backgroundImage: "url('/converted-projects-interior.webp')",
           }}
         />
 

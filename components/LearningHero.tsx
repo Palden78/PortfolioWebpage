@@ -80,7 +80,7 @@ export default function LearningHero() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/learning-interior.png')",
+            backgroundImage: "url('/converted-learning-interior.webp')",
           }}
         />
 
