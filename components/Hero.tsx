@@ -180,7 +180,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="https://github.com"
+                href="https://github.com/Palden78"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-md border border-white/40 bg-black/10 px-5 py-3 font-mono text-sm text-white backdrop-blur-sm transition-all duration-300 hover:border-white/70 hover:bg-black/20"

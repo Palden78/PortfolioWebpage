@@ -5,20 +5,20 @@ import JournalSignature from "@/components/JournalSignature";
 const contactMethods = [
   {
     label: "EMAIL",
-    value: "YOUR_EMAIL@example.com",
-    href: "mailto:YOUR_EMAIL@example.com",
+    value: "palden6234@gmail.com",
+    href: "mailto:palden6234@gmail.com",
     description: "For direct correspondence.",
   },
   {
     label: "GITHUB",
-    value: "github.com/YOUR_USERNAME",
-    href: "https://github.com/YOUR_USERNAME",
+    value: "github.com/Palden78",
+    href: "https://github.com/Palden78",
     description: "Code, experiments, and things I'm building.",
   },
   {
     label: "LINKEDIN",
-    value: "linkedin.com/in/YOUR_USERNAME",
-    href: "https://www.linkedin.com/in/YOUR_USERNAME",
+    value: "linkedin.com/in/palden-tamang",
+    href: "https://www.linkedin.com/in/palden-tamang-b281141a0/",
     description: "Professional background and experience.",
   },
 ];
