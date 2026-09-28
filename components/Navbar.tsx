@@ -54,7 +54,7 @@ export default function Navbar() {
           onClick={() => setOpen((value) => !value)}
           aria-label={open ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={open}
-          className="rounded-md border border-white/30 bg-black/10 px-3 py-2 font-mono text-xs text-white backdrop-blur-sm transition-colors hover:border-white/60"
+          className="rounded-md border border-white/30 bg-black/10 px-3 py-2 font-mono text-xs text-white backdrop-blur-sm transition-colors hover:border-white/60 sm:hidden"
         >
           {open ? "close" : "menu"}
         </button>
