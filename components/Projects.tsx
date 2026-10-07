@@ -19,23 +19,42 @@ const devProjects: Project[] = [
     title: "APSAP Research Assistant",
     description:
       "A retrieval-augmented archaeological research assistant built to help researchers retrieve grounded information from a curated collection of archaeological sources.",
-    stack: [
-      "Next.js",
-      "React",
-      "FastAPI",
-      "MySQL",
-      "ChromaDB",
-      "Docker",
-    ],
+    stack: ["Next.js", "React", "FastAPI", "MySQL", "ChromaDB", "Docker"],
     problem:
-      "Archaeological knowledge was distributed across a large collection of research documents, making it difficult to find relevant information quickly while keeping answers grounded in the original sources.",
+      "Archaeological knowledge was distributed across research documents, making it difficult to find relevant information quickly while keeping answers grounded in the original sources.",
     approach:
-      "Built a full-stack RAG system that combines document processing, vector retrieval, structured data, and an interactive web interface to return source-grounded answers.",
+      "Built a full-stack RAG system combining document processing, vector retrieval, structured data, and an interactive web interface for source-grounded answers.",
     learned:
-      "How retrieval quality, document processing, chunking, evaluation, and clear system boundaries matter just as much as the language model in an AI application.",
+      "How retrieval quality, document processing, chunking, evaluation, and clear system boundaries matter as much as the language model in an AI application.",
   },
   {
     number: "02",
+    title: "Kanban Task Board",
+    description:
+      "A full-stack Kanban application that evolved from a local task board into an authenticated workspace with persistent backend storage and caching.",
+    stack: ["React", "TypeScript", "Vite", "FastAPI", "PostgreSQL", "Redis", "Docker"],
+    problem:
+      "A simple task board became an opportunity to explore authentication, persistent data, ownership, API design, and the infrastructure behind a multi-user application.",
+    approach:
+      "Built demo and authenticated workflows, JWT authentication, owner-scoped task CRUD, PostgreSQL persistence, Alembic migrations, Redis caching, Docker Compose, and GitHub Actions CI.",
+    learned:
+      "How frontend state, authentication, database ownership, caching, migrations, testing, and deployment concerns fit together in a real full-stack system.",
+  },
+  {
+    number: "03",
+    title: "Workout Tracker",
+    description:
+      "A local-first iPhone workout tracker built to replace an inconvenient notes-based workflow with structured workout logging, progress tracking, and reliable data backup.",
+    stack: ["Expo", "React Native", "TypeScript", "SQLite", "XLSX"],
+    problem:
+      "Recording workouts in a notes app made structured tracking, reviewing progress, and maintaining workout history unnecessarily difficult.",
+    approach:
+      "Built a native mobile application with SQLite persistence, calendar logging, custom exercises, progression statistics, streak tracking, and XLSX export/import with validation and atomic restoration.",
+    learned:
+      "How local persistence, transactional imports, data validation, mobile navigation, and designing around an actual personal workflow shape a useful application.",
+  },
+  {
+    number: "04",
     title: "URL Shortener",
     description:
       "A backend-focused URL shortening service built to explore the fundamentals of designing, persisting, and deploying a small production-style API.",
@@ -47,28 +66,31 @@ const devProjects: Project[] = [
     learned:
       "How small backend systems expose core engineering concepts such as database modeling, API design, validation, configuration, and deployment.",
   },
-  {
-    number: "03",
-    title: "Workout Tracker",
-    description:
-      "A local-first iPhone workout tracker built to replace an inconvenient notes-based workflow with structured workout logging, history, progression tracking, and reliable data backup.",
-    stack: [
-      "Expo",
-      "React Native",
-      "TypeScript",
-      "SQLite",
-      "XLSX",
-    ],
-    problem:
-      "Recording workouts in a notes app made structured tracking, reviewing progress, and maintaining workout history unnecessarily difficult.",
-    approach:
-      "Built a native mobile application with SQLite persistence, calendar-based logging, exercise management, progress statistics, streak tracking, and XLSX export/import for data portability.",
-    learned:
-      "How local persistence, transactional imports, data validation, mobile navigation, and designing around an actual personal workflow shape a useful application.",
-  },
 ];
 
-const cybersecurityProjects: Project[] = [];
+const cybersecurityProjects: Project[] = [
+  {
+    number: "01",
+    title: "GraphSentry",
+    description:
+      "A security posture and vulnerability management platform exploring how SOC analysts can investigate infrastructure assets and vulnerability findings through a GraphQL-based system.",
+    stack: [
+      "FastAPI",
+      "Strawberry GraphQL",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "Apollo Client",
+    ],
+    problem:
+      "Security data often spans infrastructure assets, vulnerabilities, remediation state, and threat intelligence, creating complex relationships that are awkward to query through rigid REST endpoints.",
+    approach:
+      "Built a GraphQL architecture with typed schemas, nested asset-to-vulnerability queries, DataLoaders to address N+1 queries, field-level authorization, Apollo caching, and background ingestion of CISA KEV and NIST NVD vulnerability data.",
+    learned:
+      "How GraphQL changes API design, how DataLoaders control database access patterns, and how security tooling connects asset inventory, vulnerability intelligence, authorization, and analyst workflows.",
+  },
+];
 
 type FolderType = "dev" | "cybersecurity";
 
