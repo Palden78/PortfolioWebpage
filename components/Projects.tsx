@@ -18,44 +18,59 @@ const devProjects: Project[] = [
     number: "01",
     title: "APSAP Research Assistant",
     description:
-      "A grounded archaeological research assistant designed to help researchers and students retrieve useful information from a curated collection of archaeological sources.",
+      "A retrieval-augmented archaeological research assistant built to help researchers retrieve grounded information from a curated collection of archaeological sources.",
     stack: [
       "Next.js",
       "React",
       "FastAPI",
-      "ChromaDB",
       "MySQL",
+      "ChromaDB",
       "Docker",
     ],
     problem:
-      "Archaeological material was spread across curated research documents, making grounded answers difficult to retrieve quickly.",
+      "Archaeological knowledge was distributed across a large collection of research documents, making it difficult to find relevant information quickly while keeping answers grounded in the original sources.",
     approach:
-      "Built a retrieval-augmented assistant that combines vector search, structured retrieval, and online search while keeping answers grounded in the supplied sources.",
+      "Built a full-stack RAG system that combines document processing, vector retrieval, structured data, and an interactive web interface to return source-grounded answers.",
     learned:
-      "How retrieval quality, chunking, evaluation, and system boundaries matter just as much as the language model itself.",
+      "How retrieval quality, document processing, chunking, evaluation, and clear system boundaries matter just as much as the language model in an AI application.",
   },
   {
     number: "02",
     title: "URL Shortener",
     description:
-      "A small backend-focused system built to understand how HTTP requests, persistence, validation, and deployment fit together in a real application.",
+      "A backend-focused URL shortening service built to explore the fundamentals of designing, persisting, and deploying a small production-style API.",
     stack: ["FastAPI", "PostgreSQL", "Docker", "Python"],
     problem:
-      "A URL shortener looks simple on the surface, but even a small service requires careful handling of data modeling, validation, failures, and configuration.",
+      "A URL shortener appears simple, but even a small service requires decisions around data modeling, validation, HTTP behavior, persistence, and deployment.",
     approach:
-      "Designed a REST API backed by PostgreSQL, containerized the application, and separated application logic from persistence and deployment concerns.",
+      "Designed a REST API backed by PostgreSQL and containerized the service with Docker, keeping application logic, persistence, and deployment concerns clearly separated.",
     learned:
-      "How seemingly simple backend systems expose important engineering decisions around data modeling, validation, configuration, and deployment.",
+      "How small backend systems expose core engineering concepts such as database modeling, API design, validation, configuration, and deployment.",
+  },
+  {
+    number: "03",
+    title: "Workout Tracker",
+    description:
+      "A local-first iPhone workout tracker built to replace an inconvenient notes-based workflow with structured workout logging, history, progression tracking, and reliable data backup.",
+    stack: [
+      "Expo",
+      "React Native",
+      "TypeScript",
+      "SQLite",
+      "XLSX",
+    ],
+    problem:
+      "Recording workouts in a notes app made structured tracking, reviewing progress, and maintaining workout history unnecessarily difficult.",
+    approach:
+      "Built a native mobile application with SQLite persistence, calendar-based logging, exercise management, progress statistics, streak tracking, and XLSX export/import for data portability.",
+    learned:
+      "How local persistence, transactional imports, data validation, mobile navigation, and designing around an actual personal workflow shape a useful application.",
   },
 ];
 
 const cybersecurityProjects: Project[] = [];
 
 type FolderType = "dev" | "cybersecurity";
-
-/* -------------------------------------------------------------------------- */
-/* Folder Icons                                                                */
-/* -------------------------------------------------------------------------- */
 
 function DevFolderIcon({ active }: { active: boolean }) {
   return (
@@ -64,46 +79,36 @@ function DevFolderIcon({ active }: { active: boolean }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className="h-20 w-24"
-      animate={{
-        y: active ? -2 : 0,
-      }}
-      transition={{
-        duration: 0.3,
-        ease: "easeOut",
-      }}
+      animate={{ y: active ? -2 : 0 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
     >
-      {/* Folder tab */}
       <motion.path
         d="M8 18C8 14.6863 10.6863 12 14 12H39L47 21H86C89.3137 21 92 23.6863 92 27V64C92 67.3137 89.3137 70 86 70H14C10.6863 70 8 67.3137 8 64V18Z"
         stroke="currentColor"
         strokeWidth="2"
         animate={{
-          fill: active ? "rgba(155, 120, 71, 0.16)" : "rgba(155, 120, 71, 0.08)",
+          fill: active
+            ? "rgba(155, 120, 71, 0.16)"
+            : "rgba(155, 120, 71, 0.08)",
         }}
         transition={{ duration: 0.25 }}
       />
 
-      {/* Folder body */}
       <motion.path
         d="M8 28H92V64C92 67.3137 89.3137 70 86 70H14C10.6863 70 8 67.3137 8 64V28Z"
         stroke="currentColor"
         strokeWidth="2"
-        animate={{
-          y: active ? -1 : 0,
-        }}
+        animate={{ y: active ? -1 : 0 }}
         transition={{ duration: 0.25 }}
       />
 
-      {/* Terminal prompt */}
       <motion.path
         d="M28 43L35 49L28 55"
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        animate={{
-          x: active ? 2 : 0,
-        }}
+        animate={{ x: active ? 2 : 0 }}
         transition={{ duration: 0.25 }}
       />
 
@@ -112,9 +117,7 @@ function DevFolderIcon({ active }: { active: boolean }) {
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
-        animate={{
-          x: active ? 2 : 0,
-        }}
+        animate={{ x: active ? 2 : 0 }}
         transition={{ duration: 0.25 }}
       />
     </motion.svg>
@@ -128,21 +131,17 @@ function CybersecurityFolderIcon({ active }: { active: boolean }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className="h-20 w-24"
-      animate={{
-        y: active ? -2 : 0,
-      }}
-      transition={{
-        duration: 0.3,
-        ease: "easeOut",
-      }}
+      animate={{ y: active ? -2 : 0 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
     >
-      {/* Folder */}
       <motion.path
         d="M8 18C8 14.6863 10.6863 12 14 12H39L47 21H86C89.3137 21 92 23.6863 92 27V64C92 67.3137 89.3137 70 86 70H14C10.6863 70 8 67.3137 8 64V18Z"
         stroke="currentColor"
         strokeWidth="2"
         animate={{
-          fill: active ? "rgba(155, 120, 71, 0.16)" : "rgba(155, 120, 71, 0.08)",
+          fill: active
+            ? "rgba(155, 120, 71, 0.16)"
+            : "rgba(155, 120, 71, 0.08)",
         }}
         transition={{ duration: 0.25 }}
       />
@@ -153,42 +152,27 @@ function CybersecurityFolderIcon({ active }: { active: boolean }) {
         strokeWidth="2"
       />
 
-      {/* Shield */}
       <motion.path
         d="M50 39L62 43V51C62 58 56.5 62 50 65C43.5 62 38 58 38 51V43L50 39Z"
         stroke="currentColor"
         strokeWidth="2"
         strokeLinejoin="round"
-        animate={{
-          scale: active ? 1.08 : 1,
-        }}
-        style={{
-          transformOrigin: "50% 52px",
-        }}
-        transition={{
-          duration: 0.3,
-          ease: "easeOut",
-        }}
+        animate={{ scale: active ? 1.08 : 1 }}
+        style={{ transformOrigin: "50% 52px" }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
       />
 
-      {/* Shield centre */}
       <motion.path
         d="M44.5 51L48 54.5L55.5 47"
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        animate={{
-          opacity: active ? 1 : 0.65,
-        }}
+        animate={{ opacity: active ? 1 : 0.65 }}
       />
     </motion.svg>
   );
 }
-
-/* -------------------------------------------------------------------------- */
-/* Folder                                                                       */
-/* -------------------------------------------------------------------------- */
 
 function ProjectFolder({
   type,
@@ -208,16 +192,9 @@ function ProjectFolder({
       type="button"
       onClick={onClick}
       initial={false}
-      animate={{
-        y: active ? -4 : 0,
-      }}
-      whileHover={{
-        y: -7,
-      }}
-      transition={{
-        duration: 0.3,
-        ease: "easeOut",
-      }}
+      animate={{ y: active ? -4 : 0 }}
+      whileHover={{ y: -7 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
       className={`group relative w-full max-w-xs text-left ${
         active ? "text-[#6d512e]" : "text-[#806f59]"
       }`}
@@ -229,7 +206,6 @@ function ProjectFolder({
             : "border-[#c9bda7] bg-[#eee5d5]/45 hover:border-[#9b7847] hover:bg-[#f2e9da]/70"
         }`}
       >
-        {/* Decorative corner mark */}
         <div
           className={`absolute right-4 top-4 h-2 w-2 rotate-45 border transition-all duration-300 ${
             active
@@ -238,7 +214,6 @@ function ProjectFolder({
           }`}
         />
 
-        {/* Folder icon */}
         <div className="mb-5">
           {type === "dev" ? (
             <DevFolderIcon active={active} />
@@ -247,13 +222,11 @@ function ProjectFolder({
           )}
         </div>
 
-        {/* Metadata */}
         <div className="flex items-end justify-between gap-4">
           <div>
             <p className="font-mono text-[9px] tracking-[0.22em] text-[#9b7847]">
               DIRECTORY
             </p>
-
             <h3 className="mt-2 font-cinzel text-xl tracking-wide">
               {title}
             </h3>
@@ -264,44 +237,32 @@ function ProjectFolder({
           </span>
         </div>
 
-        {/* Folder description */}
         <p className="mt-3 font-mono text-[9px] tracking-wide text-[#8a755b]">
           {type === "dev"
             ? "software / systems / experiments"
             : "security / infrastructure / investigations"}
         </p>
 
-        {/* Active underline */}
         <motion.div
           className="absolute bottom-0 left-0 h-px bg-[#9b7847]"
           initial={{ width: 0 }}
-          animate={{
-            width: active ? "100%" : "0%",
-          }}
-          transition={{
-            duration: 0.35,
-            ease: "easeOut",
-          }}
+          animate={{ width: active ? "100%" : "0%" }}
+          transition={{ duration: 0.35, ease: "easeOut" }}
         />
       </div>
 
-      {/* Hover hint */}
       <motion.div
         initial={{ opacity: 0, x: -4 }}
         whileHover={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.2 }}
         className="mt-2 flex items-center gap-2 font-mono text-[8px] tracking-[0.2em] text-[#9b7847]"
       >
-        <span>{active ? "OPEN DIRECTORY" : "OPEN DIRECTORY"}</span>
+        <span>OPEN DIRECTORY</span>
         <span>→</span>
       </motion.div>
     </motion.button>
   );
 }
-
-/* -------------------------------------------------------------------------- */
-/* Project Entry                                                                */
-/* -------------------------------------------------------------------------- */
 
 function ProjectEntry({
   project,
@@ -322,17 +283,12 @@ function ProjectEntry({
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -8 }}
-      transition={{
-        duration: 0.3,
-        delay: index * 0.05,
-      }}
+      transition={{ duration: 0.3, delay: index * 0.05 }}
       className="border-b border-[#c9bda7] py-8"
     >
       <button
         type="button"
-        onClick={() =>
-          setOpenProject(isOpen ? null : project.number)
-        }
+        onClick={() => setOpenProject(isOpen ? null : project.number)}
         className="w-full text-left"
       >
         <div className="grid gap-6 md:grid-cols-[80px_1fr_auto] md:items-start">
@@ -340,16 +296,13 @@ function ProjectEntry({
             <span className="font-mono text-xs text-[#9b7847]">
               {project.number}
             </span>
-
             <p className="mt-2 font-mono text-[8px] tracking-widest text-[#b09e84]">
               ENTRY
             </p>
           </div>
 
           <div>
-            <h3 className="font-cinzel text-2xl">
-              {project.title}
-            </h3>
+            <h3 className="font-cinzel text-2xl">{project.title}</h3>
 
             <p className="mt-3 max-w-2xl text-sm leading-7 text-[#756957]">
               {project.description}
@@ -379,10 +332,7 @@ function ProjectEntry({
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{
-              duration: 0.35,
-              ease: "easeInOut",
-            }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
             className="overflow-hidden"
           >
             <div className="mt-10 grid gap-8 border-t border-[#c9bda7] pt-8 md:grid-cols-3 md:pl-[80px]">
@@ -390,7 +340,6 @@ function ProjectEntry({
                 <p className="font-mono text-[9px] tracking-[0.2em] text-[#9b7847]">
                   THE PROBLEM
                 </p>
-
                 <p className="mt-3 text-sm leading-7 text-[#665846]">
                   {project.problem}
                 </p>
@@ -400,7 +349,6 @@ function ProjectEntry({
                 <p className="font-mono text-[9px] tracking-[0.2em] text-[#9b7847]">
                   THE APPROACH
                 </p>
-
                 <p className="mt-3 text-sm leading-7 text-[#665846]">
                   {project.approach}
                 </p>
@@ -410,7 +358,6 @@ function ProjectEntry({
                 <p className="font-mono text-[9px] tracking-[0.2em] text-[#9b7847]">
                   WHAT I LEARNED
                 </p>
-
                 <p className="mt-3 text-sm leading-7 text-[#665846]">
                   {project.learned}
                 </p>
@@ -423,21 +370,12 @@ function ProjectEntry({
   );
 }
 
-/* -------------------------------------------------------------------------- */
-/* Main Projects                                                                */
-/* -------------------------------------------------------------------------- */
-
 export default function Projects() {
-  const [activeFolder, setActiveFolder] =
-    useState<FolderType>("dev");
-
-  const [openProject, setOpenProject] =
-    useState<string | null>(null);
+  const [activeFolder, setActiveFolder] = useState<FolderType>("dev");
+  const [openProject, setOpenProject] = useState<string | null>(null);
 
   const projects =
-    activeFolder === "dev"
-      ? devProjects
-      : cybersecurityProjects;
+    activeFolder === "dev" ? devProjects : cybersecurityProjects;
 
   function changeFolder(folder: FolderType) {
     setActiveFolder(folder);
@@ -447,19 +385,12 @@ export default function Projects() {
   return (
     <section className="bg-[#e9dfcc] px-6 py-24 text-[#3b3025]">
       <div className="mx-auto max-w-6xl">
-        {/* ---------------------------------------------------------------- */}
-        {/* Header                                                            */}
-        {/* ---------------------------------------------------------------- */}
-
         <div className="mb-12 flex flex-col gap-4 border-b border-[#c9bda7] pb-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="font-mono text-[10px] tracking-[0.25em] text-[#9b7847]">
               ARCHIVE
             </p>
-
-            <h2 className="mt-2 font-cinzel text-3xl">
-              Project directory
-            </h2>
+            <h2 className="mt-2 font-cinzel text-3xl">Project directory</h2>
           </div>
 
           <div className="font-mono text-[10px] tracking-widest text-[#8a755b]">
@@ -467,22 +398,13 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* ---------------------------------------------------------------- */}
-        {/* Folder Directory                                                  */}
-        {/* ---------------------------------------------------------------- */}
-
         <div className="relative">
-          {/* Small archive label */}
           <div className="mb-5 flex items-center gap-3">
             <span className="font-mono text-[9px] tracking-[0.2em] text-[#8a755b]">
               DIRECTORIES
             </span>
-
             <span className="h-px flex-1 bg-[#c9bda7]" />
-
-            <span className="font-mono text-[9px] text-[#b09e84]">
-              02
-            </span>
+            <span className="font-mono text-[9px] text-[#b09e84]">02</span>
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2">
@@ -499,16 +421,10 @@ export default function Projects() {
               title="CYBERSECURITY"
               count={cybersecurityProjects.length}
               active={activeFolder === "cybersecurity"}
-              onClick={() =>
-                changeFolder("cybersecurity")
-              }
+              onClick={() => changeFolder("cybersecurity")}
             />
           </div>
         </div>
-
-        {/* ---------------------------------------------------------------- */}
-        {/* Directory Divider                                                 */}
-        {/* ---------------------------------------------------------------- */}
 
         <div className="my-14 flex items-center gap-4">
           <div className="h-px flex-1 bg-[#c9bda7]" />
@@ -520,7 +436,6 @@ export default function Projects() {
             className="flex items-center gap-3"
           >
             <span className="h-2 w-2 rotate-45 bg-[#9b7847]" />
-
             <span className="font-mono text-[9px] tracking-[0.22em] text-[#8a755b]">
               / {activeFolder === "dev" ? "DEV" : "CYBERSECURITY"}
             </span>
@@ -528,10 +443,6 @@ export default function Projects() {
 
           <div className="h-px flex-1 bg-[#c9bda7]" />
         </div>
-
-        {/* ---------------------------------------------------------------- */}
-        {/* Project List                                                      */}
-        {/* ---------------------------------------------------------------- */}
 
         <AnimatePresence mode="wait">
           {projects.length > 0 ? (
@@ -549,9 +460,7 @@ export default function Projects() {
 
                 <p className="font-mono text-[9px] tracking-widest text-[#8a755b]">
                   {String(projects.length).padStart(2, "0")}{" "}
-                  {projects.length === 1
-                    ? "ENTRY"
-                    : "ENTRIES"}
+                  {projects.length === 1 ? "ENTRY" : "ENTRIES"}
                 </p>
               </div>
 
@@ -568,10 +477,6 @@ export default function Projects() {
               </div>
             </motion.div>
           ) : (
-            /* ------------------------------------------------------------ */
-            /* Cybersecurity Empty State                                    */
-            /* ------------------------------------------------------------ */
-
             <motion.div
               key="empty"
               initial={{ opacity: 0, y: 12 }}
@@ -580,7 +485,6 @@ export default function Projects() {
               transition={{ duration: 0.3 }}
               className="relative overflow-hidden rounded-lg border border-dashed border-[#c9bda7] bg-[#eee5d5]/35 px-6 py-20 text-center"
             >
-              {/* Background coordinates */}
               <div className="pointer-events-none absolute left-5 top-5 font-mono text-[8px] leading-5 tracking-widest text-[#b09e84]">
                 RECORD STATUS
                 <br />
@@ -593,7 +497,6 @@ export default function Projects() {
                 CYBER / 00
               </div>
 
-              {/* Icon */}
               <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-[#c9bda7] bg-[#e9dfcc]">
                 <svg
                   viewBox="0 0 40 40"
@@ -606,7 +509,6 @@ export default function Projects() {
                     stroke="currentColor"
                     strokeWidth="1.5"
                   />
-
                   <path
                     d="M15 18L18.5 21.5L25 15"
                     stroke="currentColor"
@@ -626,14 +528,13 @@ export default function Projects() {
               </h3>
 
               <p className="mx-auto mt-4 max-w-md text-sm leading-7 text-[#756957]">
-                No cybersecurity projects are publicly documented
-                yet. This directory is reserved for future security
-                experiments, investigations, and systems.
+                No cybersecurity projects are publicly documented yet. This
+                directory is reserved for future security experiments,
+                investigations, and systems.
               </p>
 
               <div className="mt-7 inline-flex items-center gap-3 border border-[#c9bda7] px-4 py-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#b8a487]" />
-
                 <span className="font-mono text-[9px] tracking-[0.18em] text-[#8a755b]">
                   STATUS / IN PROGRESS
                 </span>
