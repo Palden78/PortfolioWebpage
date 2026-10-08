@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
-import { stories } from "@/data/stories";
+import { stories, type StoryContent } from "@/data/stories";
 
 type StoryPageProps = {
   params: Promise<{
@@ -77,9 +77,23 @@ export default async function StoryPage({
         <div className="mx-auto max-w-3xl">
           <div className="border-t border-[#c9bda7] pt-12">
             <div className="space-y-7 text-lg leading-[1.9] text-[#4f4234]">
-              {story.content.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
+              {story.content.map((item, index) => {
+                if (typeof item === "string") {
+                  return <p key={index}>{item}</p>;
+                }
+
+                const image = item as Extract<StoryContent, { type: "image" }>;
+
+                return (
+                  <figure key={index} className="my-10">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="mx-auto w-full max-w-3xl rounded-2xl object-cover shadow-sm"
+                    />
+                  </figure>
+                );
+              })}
             </div>
           </div>
 
