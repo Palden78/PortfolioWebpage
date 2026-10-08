@@ -92,7 +92,7 @@ export const stories: Story[] = [
 
         "I can say the same about so many of the people reading this right now. If everything had gone exactly as planned, I might never have met any of you. Every single one of you has been a part of my journey in some way, and I am genuinely grateful for every friendship, every conversation, and every small act of support along the way — no matter how we first met.",
 
-        "I don't know what the future holds, and I'll admit that I'm a little worried about the unknown that awaits me in Australia. But I can say one thing for certain: I'm ready to wander into the unknown and face the world head-on. Similar to this final scene from my favourite childhood cartoon",
+        "I don't know what the future holds, and I'll admit that I'm a little worried about the unknown that awaits me in Australia. But I can say one thing for certain: I'm ready to wander into the unknown and face the world head-on. Similar to this final scene from one of my favourite childhood cartoons (Gravity Falls)",
 
         {
           type: "image",
