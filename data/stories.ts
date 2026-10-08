@@ -13,7 +13,7 @@ export const stories: Story[] = [
     title: "How i started off in the tech world",
     description:
       "A reflection on how i started my tech journey, and what i would have done differently if i had a time machine and could go back.",
-    date: "Coming soon",
+    date: "30-09-2026",
     category: "Learning",
     content: [
       "The tech landscape of the 2010s to 2020s was monumental, it was shaped by big time Billionaires giving one advice - learn to code because coding is the new meta skillset that will go well with the digitalization of humanity.",
@@ -37,17 +37,61 @@ export const stories: Story[] = [
   },
 
   {
-    slug: "things-i-wish-i-knew-earlier",
-    title: "Things I Wish I Knew Earlier",
+    slug: "everything-happens-for-a-reason",
+    title: "Everything Happens for a Reason ... Life is understood in reverse",
     description:
-      "Lessons, mistakes, and ideas that changed the way I think about learning.",
-    date: "Coming soon",
+      "We don't always understand why life takes us down certain paths. Sometimes, it takes looking back to realize that every unexpected turn was leading us to somewhere we were meant to be, and it takes time.",
+    date: "09/10/2026",
     category: "Reflection",
     content: [
-      "This is a placeholder for a future story.",
-      "This could become a collection of lessons you learned through university, personal projects, work, or life.",
-      "The goal is not to sound perfect. The interesting part is documenting what you actually experienced.",
-    ],
+        "The universe is a strange place. I used to think life was a straight path — that if I followed the right plan, everything would eventually go my way.",
+
+        "But life has a way of making its own plans. Things may not always make sense in the moment, but when we look back, we can often understand why things happened the way they did — or at least understand them a little better.",
+
+        "Sometimes, certain paths lead us somewhere we never expected to be. For me, that path led to HKU. Five years ago, I never imagined that I would end up studying here.",
+
+        "Five years ago, in the fall of 2021, I was in my final year of secondary school. I was having fun with my friends, messing around, and making the most of our remaining time together before we all went our separate ways.",
+
+        "Then came the time when my peers and I started applying to universities, both locally and around the world. It was an exciting and uncertain time. I would attend university information days around Hong Kong with my friends while researching universities overseas on my own.",
+
+        "At the time, I applied to a bunch of universities in Hong Kong and even applied to five universities in the UK through the UCAS application system — UCL, York, Southampton, and... honestly, I forgot the rest lol.",
+
+        "But at the time, I really wanted to get into UCL. Unfortunately, I didn't get an offer because my predicted A-level Mathematics grade was only an A. Back then, universities used predicted grades during the application process, even though I had been performing at an A* level throughout the previous year.",
+
+        "After that, I stopped caring much about the UK universities. Not long after, I received an offer from HKUST for a Bachelor of Engineering with an extended major in AI. I thought I was probably going to HKUST, but I remembered the nearly two-hour commute just to get there, so I was still hesitant.",
+
+        "Then, a few days later, I heard back from HKU. I had received a conditional offer. The conditions weren't too bad, so I accepted it.",
+
+        "I was really happy with my A-level results, and I was finally ready to begin my journey at HKU. Little did I know, however, that I was about to face another chain of unexpected events.",
+
+        "Firstly, International A-level results notoriously come out quite late each year, with candidates only receiving them around the middle of August. This meant I was still waiting for my results while watching other students complete their master registration and even begin enrolling in classes. After nearly two weeks of back-and-forth struggles, I was finally able to enrol at HKU — but I still couldn't add any classes until the add/drop period began on September 1st.",
+
+        "This led me into another unexpected situation. I knew I wanted to major in Computer Science from day one, and back then, Computer Programming 1 was an incredibly popular course — much more so than it is now, with all the AI fearmongering around tech lol. The classes were packed, but I saw one subclass that still had an available spot, so I quickly enrolled. I happily attended my first lecture at HKU, which was held in the Grand Hall at CPD because of the huge number of students. Hundreds of us were sitting there together. Honestly, it felt like a grand opening to my university journey lol.",
+        "I went home excited for my next lecture, only to discover that I had been unenrolled from the class because it was already full. Perhaps I had enrolled too late.",
+
+        "I tried looking for other subclasses, but they were all full too. After a few days of constantly checking and seeing no changes, I decided to email several professors and ask whether not taking Computer Programming 1 in my first semester would prevent me from joining the Computer Science major. The answer was no — I could simply take Computer Programming 2 in my second-year, first semester instead.",
+
+       "So I put my head down and picked Thermofluid Mechanics instead, because I had always found mechanical engineering to be an interesting field.",
+        "On the first lecture of that class, I didn't recognise anyone, so I decided to sit right at the very front. For some reason, I had a strange urge to sit in the front that day — I'm usually a backbencher lol.",
+
+        "A few minutes later, a lost and curious-looking boy walked into the classroom and decided to sit in the same row as me, just one seat away. And just like that, the class began.",
+
+        "During the break, he introduced himself. His name was Abraham, and he was from Tanzania, a country in East Africa. We exchanged contacts, and the rest is history.",
+
+        "He became one of my good friends throughout my time at HKU. He is incredibly intelligent, hardworking, and driven, and he has always inspired me. He came all the way across the world by himself and worked relentlessly, day and night, to build a successful life in Hong Kong. As I begin my master's studies in Australia, I hope I can carry forward that same level of dedication and drive that i saw from him with me.",
+        "P.S. Abraham, if you're reading this, I hope we can meet again someday. And thanks for deciding to sit next to me that day lol.",
+        "This brings me back to my main point. By not being able to enrol in the course I wanted, and by not getting into the university I originally wanted, I ended up meeting a new friend and having rich new experiences I otherwise would never have had if everything had gone according to plan.",
+
+        "I can say the same about so many of the people reading this right now. If everything had gone exactly as planned, I might never have met any of you. Every single one of you has been a part of my journey in some way, and I am genuinely grateful for every friendship, every conversation, and every small act of support along the way — no matter how we first met.",
+
+        "I don't know what the future holds, and I'll admit that I'm a little worried about the unknown that awaits me in Australia. But I can say one thing for certain: I'm ready to wander into the unknown and face the world head-on. Similar to this final scene from my favourite childhood cartoon",
+
+        "So, my final message is this: sometimes life may not go the way we want it to. But it is often those imperfections, unexpected turns, and moments of uncertainty that eventually lead us to where we are meant to be. We may feel lost while we're living through them, but one day, we'll look back and understand the value those moments brought into our lives.",
+
+        "And perhaps that's why life is lived forwards, but understood backwards.",
+
+        "Thank you for reading once again!"
+    ]
   },
 
   {
