@@ -1,10 +1,18 @@
+export type StoryContent =
+  | string
+  | {
+      type: "image";
+      src: string;
+      alt: string;
+    };
+
 export type Story = {
   slug: string;
   title: string;
   description: string;
   date: string;
   category: string;
-  content: string[];
+  content: StoryContent[];
 };
 
 export const stories: Story[] = [
@@ -85,6 +93,12 @@ export const stories: Story[] = [
         "I can say the same about so many of the people reading this right now. If everything had gone exactly as planned, I might never have met any of you. Every single one of you has been a part of my journey in some way, and I am genuinely grateful for every friendship, every conversation, and every small act of support along the way — no matter how we first met.",
 
         "I don't know what the future holds, and I'll admit that I'm a little worried about the unknown that awaits me in Australia. But I can say one thing for certain: I'm ready to wander into the unknown and face the world head-on. Similar to this final scene from my favourite childhood cartoon",
+
+        {
+          type: "image",
+          src: "/gravity_falls.jpg",
+          alt: "Gravity Falls final scene from a favourite childhood cartoon",
+        },
 
         "So, my final message is this: sometimes life may not go the way we want it to. But it is often those imperfections, unexpected turns, and moments of uncertainty that eventually lead us to where we are meant to be. We may feel lost while we're living through them, but one day, we'll look back and understand the value those moments brought into our lives.",
 
