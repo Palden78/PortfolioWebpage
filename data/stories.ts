@@ -49,7 +49,7 @@ export const stories: Story[] = [
     title: "Everything Happens for a Reason ... Life is understood in reverse",
     description:
       "We don't always understand why life takes us down certain paths. Sometimes, it takes looking back to realize that every unexpected turn was leading us to somewhere we were meant to be, and it takes time.",
-    date: "09/10/2026",
+    date: "09-10-2026",
     category: "Reflection",
     content: [
         "The universe is a strange place. I used to think life was a straight path — that if I followed the right plan, everything would eventually go my way.",
