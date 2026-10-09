@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
+import StoryComments from "@/components/StoryComments";
 import { stories, type StoryContent } from "@/data/stories";
 
 type StoryPageProps = {
@@ -107,6 +108,13 @@ export default async function StoryPage({
           </div>
         </div>
       </article>
+
+      {/* Public comments with friends-only posting */}
+      <section className="relative px-6 pb-24">
+        <div className="mx-auto max-w-3xl">
+          <StoryComments storySlug={story.slug} />
+        </div>
+      </section>
     </main>
   );
 }
