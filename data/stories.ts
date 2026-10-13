@@ -109,7 +109,7 @@ export const stories: Story[] = [
   },
 
   {
-    slug: "building-things-to-understand-them",
+    slug: "twoCuriousMinds",
     title: "Two Curious Minds, One Unforgettable Day",
     description:
       "A day of good conversations, shared interests, and learning more about my home country Nepal from a fellow tech enthusiast",
@@ -144,18 +144,15 @@ export const stories: Story[] = [
 
         "I can't disclose too much about our conversations, but what surprised me most was the amount of tech talent hidden away in Nepal. To elaborate, many of the friends he mentioned were absolutely cracked. Some had built their own operating systems as teenagers (Windows and macOS are examples of operating systems), while others had even worked on certain mission-critical government operations and much more. This really got me thinking about how, in developing countries, talent is abundant, but opportunities are often scarce. There are people out there who may be far more talented than I am, yet lack access to the opportunities I have. Some of them would give anything to be in my position. That realisation left me reflecting on how I need to lock in and make the most of every opportunity ahead of me, unlike how I approached my undergraduate years.",
 
-        "Overall, I had a great day with him and our family. He even bought me ice cream, lol. Next time we meet, the ice cream is on me! Unfortunately, I ate a little too much, and between my rather weak immune system and the dust along some parts of the road, my body didn't take it too well. A few days later, I ended up having asthma symptoms, haha.",
+        "Overall, I had a great day with him and our family. He even bought me ice cream, lol. Unfortunately, I ate a little too much, and between my rather weak immune system and the dust along some parts of the road, my body didn't take it too well. A few days later, I ended up having asthma symptoms, haha.",
 
         {
         type: "image",
         src: "/cs_aju.webp",
         alt: "Photo of me and CSAJU with my crazy blonde hair",
-        
         },
 
-
-
-      
+        "Looking back, I'm glad I got to spend that day with Aju. ( crazy blonde hair in the pic lol ) What started as a simple family meetup turned into a reminder that there's so much to learn from the people around us, sometimes in ways we never expect. I came away knowing a lot more about Nepal, seeing the tech world from a different perspective, and feeling more motivated to make the most of the opportunities I've been given moving forward. There's an incredible amount of talent out there, much of it hidden from the spotlight, and meeting Aju reminded me that passion and curiosity can take people a long way. Hopefully, the next time we meet, I'll have made some meaningful progress of my own — and, of course, I'll be returning the favour with ice cream and great insights of my own."
     ],
   },
 ];
