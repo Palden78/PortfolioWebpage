@@ -90,7 +90,7 @@ export default async function StoryPage({
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="mx-auto w-full max-w-3xl rounded-2xl object-cover shadow-sm"
+                      className={`mx-auto w-full rounded-2xl object-cover shadow-sm ${image.src === "/cs_aju.jpg" ? "max-w-md" : "max-w-3xl"}`}
                     />
                   </figure>
                 );
