@@ -152,7 +152,7 @@ export const stories: Story[] = [
         alt: "Photo of me and CSAJU with my crazy blonde hair",
         },
 
-        "Looking back, I'm glad I got to spend that day with Aju. ( crazy blonde hair in the pic lol ) What started as a simple family meetup turned into a reminder that there's so much to learn from the people around us, sometimes in ways we never expect. I came away knowing a lot more about Nepal, seeing the tech world from a different perspective, and feeling more motivated to make the most of the opportunities I've been given moving forward. There's an incredible amount of talent out there, much of it hidden from the spotlight, and meeting Aju reminded me that passion and curiosity can take people a long way. Hopefully, the next time we meet, I'll have made some meaningful progress of my own — and, of course, I'll be returning the favour with ice cream and great insights of my own."
+        "Looking back, I'm glad I got to spend that day with Aju. ( my crazy blonde hair visible in the pic lol ) What started as a simple family meetup turned into a reminder that there's so much to learn from the people around us, sometimes in ways we never expect. I came away knowing a lot more about Nepal, seeing the tech world from a different perspective, and feeling more motivated to make the most of the opportunities I've been given moving forward. There's an incredible amount of talent out there, much of it hidden from the spotlight, and meeting Aju reminded me that passion and curiosity can take people a long way. Hopefully, the next time we meet, I'll have made some meaningful progress of my own — and, of course, I'll be returning the favour with ice cream and great insights of my own."
     ],
   },
 ];
