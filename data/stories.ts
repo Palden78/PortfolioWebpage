@@ -110,15 +110,52 @@ export const stories: Story[] = [
 
   {
     slug: "building-things-to-understand-them",
-    title: "Building Things to Understand Them",
+    title: "Two Curious Minds, One Unforgettable Day",
     description:
-      "Why I often learn by building something rather than simply reading about it.",
-    date: "Coming soon",
-    category: "Engineering",
+      "A day of good conversations, shared interests, and learning more about my home country Nepal from a fellow tech enthusiast",
+    date: "13-10-2026",
+    category: "General StoryTime",
     content: [
-      "This is a placeholder for a future story.",
-      "You could talk about a project that taught you something you could not fully understand from theory alone.",
-      "Explain what confused you, what you built, what broke, and what finally clicked.",
+      "In the summer of 2018, I visited my homeland, Nepal, and spent my summer vacation there.",
+
+        "I was introduced to a distant cousin on my mom's side of the family, who struck me as intelligent and driven. His name was Aju, he was a few years older than me, and he showed me around his house while explaining the basics of the major science subjects: Biology, Chemistry, and Physics, because I had already chosen my electives for my third year of secondary school. But even back then I could tell that he was a bright and studious person.",
+
+        "Fast-forward a few years to June 2022, when I graduated from secondary school. My mom received a congratulatory message on facebook from the same cousin, who was by then well into his university journey studying Computer Science, just as I hoped to do.",
+
+        "Fast-forward to my second year of university. I decided to connect with him on LinkedIn, and he gave me some helpful advice. Admittedly, I didn't pay much attention to it at the time because I was pretty lazy, ngl.",
+
+        "But one thing that really caught my attention was his personal website, which was called CSAJU at the time. It featured stories about his motivations, life journey, and so many other cool things. His website genuinely inspired me to create one of my own someday, and it played a big part in why I started building this page and filling it with my own stories. CSAJU no longer exists, unfortunately, but his website now lives on at ajutamang.com.",
+
+        "I really really liked the idea of having my own personal site, but the barrier to getting started felt too high back then. For one, I was lazy and lacked direction. On top of that, in 2024, chatbots could barely generate usable HTML with consistent styling, so building a polished website still felt like a daunting task.",
+
+        "Then came a series of canon events towards the end of my second year and I realised it was time to stop messing around, so I started taking my studies more seriously and, for the first time, finally developed a genuine passion for technology and problem-solving.",
+
+        "Fast-forward to my final year of university. After giving my final-year project everything I had and pushing myself to achieve the best grades possible in my final semester, I found myself constantly worrying about failing even a single course. Eventually, I decided to take a quick solo trip to Nepal to unwind after my exams, clear my head, and reconnect with my roots.",
+
+        "It was my first time travelling completely alone, although I had my family helping me get around and sort everything out. I even dyed my hair a crazy colour for the first time in my life: blonde. After all, I'm only young once, and I'd rather enjoy it now while I have fewer responsibilities.",
+
+        "Then my uncle received a message from Aju saying that he was available to meet up and hang out with me on a weekend when he had a day off work. He has since built a stable and fruitful career, putting his skills to use across DevOps, backend development, and several other highly technical areas.",
+
+        "Then came the day we finally met. We shook hands and started with a regular conversation, but most of the time, we were just playing around with our little bhai (younger nephew), a nine-year-old kid who was absolutely hilarious and full of energy.",
+
+        "We didn't talk too much about tech, and he had left his laptop at home. After all, avoiding burnout is essential in tech, especially because you can dive into almost any domain and keep learning forever and ever and ever and ever and ever, recursively. There's no real end to learning or catching up in tech, particularly with the accelerated progress brought about by AI. I respected his decision, and we spent most of our time talking about life in Nepal, how things work there, and all sorts of things I had never really understood about my own country. Honestly, I realised just how much I didn't know about the place I came from.",
+
+        "He did share a few insights about tech, particularly on how to avoid burnout and develop the right mindset in such a competitive field. He also had a really cool bike and told me that he would often go for rides just to clear his head. Honestly, that sounds hella cool. This time, instead of being the oblivious guy who barely took advice seriously, I listened and came away with a better understanding of how to approach the next two crucial years of my development as I embark on my journey towards becoming a cybersecurity professional.",
+
+        "I can't disclose too much about our conversations, but what surprised me most was the amount of tech talent hidden away in Nepal. To elaborate, many of the friends he mentioned were absolutely cracked. Some had built their own operating systems as teenagers (Windows and macOS are examples of operating systems), while others had even worked on certain mission-critical government operations and much more. This really got me thinking about how, in developing countries, talent is abundant, but opportunities are often scarce. There are people out there who may be far more talented than I am, yet lack access to the opportunities I have. Some of them would give anything to be in my position. That realisation left me reflecting on how I need to lock in and make the most of every opportunity ahead of me, unlike how I approached my undergraduate years.",
+
+        "Overall, I had a great day with him and our family. He even bought me ice cream, lol. Next time we meet, the ice cream is on me! Unfortunately, I ate a little too much, and between my rather weak immune system and the dust along some parts of the road, my body didn't take it too well. A few days later, I ended up having asthma symptoms, haha.",
+
+        {
+        type: "image",
+        src: "/cs_aju.jpg",
+        alt: "Photo of me and CSAJU with my crazy blonde hair",
+        
+        },
+
+
+
+      
     ],
   },
 ];
