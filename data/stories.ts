@@ -148,7 +148,7 @@ export const stories: Story[] = [
 
         {
         type: "image",
-        src: "/cs_aju.jpg",
+        src: "/cs_aju.webp",
         alt: "Photo of me and CSAJU with my crazy blonde hair",
         
         },
